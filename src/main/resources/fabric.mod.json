@@ -1,16 +1,16 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 1.1,
   "id": "slashdupe",
   "version": "${version}",
 
   "name": "slashdupe",
-  "description": "dupe helper for dupexcraft | usage: -sld {amount}",
+  "description": "dupexcraft utility mod | usage: -sld help",
   "authors": [
     "VacCat"
   ],
   "contact": {
     "homepage": "https://petmydog.online/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/VacCatts/slashdupe"
   },
 
   "license": "CC0-1.0",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "xyz.petmydog.slashdupe.SlashDupe"
     ]
   },
   "mixins": [

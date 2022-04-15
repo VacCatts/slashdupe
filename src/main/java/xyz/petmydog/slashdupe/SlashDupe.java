@@ -1,13 +1,13 @@
-package net.fabricmc.example;
+package xyz.petmydog.slashdupe;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.MinecraftClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.mojang.brigadier.*;
+import xyz.petmydog.slashdupe.command.CommandManager;
 
-public class ExampleMod implements ModInitializer {
+public class SlashDupe implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("slashdupe");
+	public static final CommandManager cM = new CommandManager();
 
 	@Override
 	public void onInitialize() {

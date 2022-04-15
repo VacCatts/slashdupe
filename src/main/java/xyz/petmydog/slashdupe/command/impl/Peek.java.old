@@ -1,0 +1,59 @@
+package xyz.petmydog.slashdupe.command.impl;
+
+import xyz.petmydog.slashdupe.command.Command;
+import net.minecraft.block.*;
+import net.minecraft.client.gui.screen.ingame.ShulkerBoxScreen;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.screen.ShulkerBoxScreenHandler;
+import net.minecraft.text.Text;
+import xyz.petmydog.slashdupe.util.ItemContentUtils;
+
+import java.util.List;
+
+public class Peek extends Command {
+    public Peek() {
+        super("peek", "Shows whats inside the container you're holder.", "peek");
+    }
+
+    @Override
+    public void onCommand(String alias, String[] args) throws Exception {
+        System.out.println("peek");
+        ItemStack item = mc.player.getInventory().getMainHandStack();
+
+        if (item.getItem() instanceof BlockItem) {
+            Block block = ((BlockItem) item.getItem()).getBlock();
+            if (!(block instanceof ShulkerBoxBlock
+                    || block instanceof ChestBlock
+                    || block instanceof DispenserBlock
+                    || block instanceof HopperBlock)) {
+                return;
+            }
+        } else if (item.getItem() != Items.BUNDLE) {
+            return;
+        }
+
+        System.out.println("peek2");
+
+        List<ItemStack> items = ItemContentUtils.getItemsInContainer(item);
+
+        SimpleInventory inv = new SimpleInventory(items.toArray(new ItemStack[27]));
+
+        System.out.println("peek3");
+        mc.setScreen(new PeekShulkerScreen( new ShulkerBoxScreenHandler(420, mc.player.getInventory(), inv), mc.player.getInventory(), item.getName()));
+    }
+
+    static class PeekShulkerScreen extends ShulkerBoxScreen {
+
+        public PeekShulkerScreen(ShulkerBoxScreenHandler handler, PlayerInventory inventory, Text title) {
+            super(handler, inventory, title);
+        }
+
+        public boolean mouseClicked(double mouseX, double mouseY, int button) {
+            return false;
+        }
+    }
+}
