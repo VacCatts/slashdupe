@@ -7,7 +7,7 @@ import xyz.petmydog.slashdupe.command.Command;
 public class AntiAFK extends Command {
     private boolean toggle = false;
     public long curTime = Long.MAX_VALUE - 1000000L;
-    public int startTime = 30000; // 30 seconds
+    public int startTime = 15000; // 15 seconds
     public AntiAFK() {
         super("antiafk", "sends /afk every 5 minutes", "antiafk");
     }
@@ -28,7 +28,7 @@ public class AntiAFK extends Command {
         if (toggle) {
             if (curTime + startTime < System.currentTimeMillis()) {
                 curTime = System.currentTimeMillis();
-                mc.player.sendChatMessage("/afk");
+                mc.player.sendChatMessage("/test");
             }
         }
     }
