@@ -14,14 +14,21 @@ features:
     - shulker box peek (not implemented)
         - you can see the contents of shulker boxes
 
-    - disable public chat (not implemented) 
+    - disable public chat (not implemented)
         - only see fac, ally and truce chat
     - make a working /ignore (not implemented)
 
     - public, fac and ally chat switcher (not implemented)
-        - fchat
-        - pchat
-        - achat
+        - -fchat
+        - -pchat
+        - -achat
+
+    - tpa lock
+        - if someone tpas to you, instantly tpacancel
+        - toggle by putting -tpalock in the chat
+
+    - anti afk
+        - sends /afk in the chat every 5 minutes
 
     - color stuff (not implemented)
         - this https://rgb.birdflop.com/ but gui
@@ -34,8 +41,8 @@ features:
             - only see staff and console chat
 
         - console and staff chat switcher
-            - schat (sc)
-            - cchat (ch)
+            - -schat (sc)
+            - -cchat (ch)
 
 
 usage: -sld help
