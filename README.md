@@ -6,7 +6,7 @@ features:
 
     - /dupe helpers
         - /dupe on hotkey (not implemented)
-        - budget /stack
+        - sends /dupe however many times you want (also works with stack)
 
     - custom commands (not implemented)
         - aliases
@@ -18,7 +18,7 @@ features:
         - only see fac, ally and truce chat
     - make a working /ignore (not implemented)
 
-    - public, fac and ally chat switcher (not implemented)
+    - public, fac and ally chat switcher
         - -fchat
         - -pchat
         - -achat
@@ -30,9 +30,9 @@ features:
     - anti afk
         - sends /afk in the chat every 5 minutes
 
-    - color stuff (not implemented)
-        - this https://rgb.birdflop.com/ but gui
-        - color code viewer
+    - color code viewer (not implemented)
+        - shows how the color looks like in chat
+        - budget https://rgb.birdflop.com/
 
     - staff mode (not implemented)
         - checks ur ign to enable

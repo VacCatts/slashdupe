@@ -9,7 +9,7 @@ public class AntiAFK extends Command {
     public long curTime = Long.MAX_VALUE - 1000000L;
     public int startTime = 15000; // 15 seconds
     public AntiAFK() {
-        super("antiafk", "sends /afk every 5 minutes", "antiafk");
+        super("antiafk", "sends /afk every 5 minutes", "antiafk", "aafk", "afk");
     }
 
     @Override

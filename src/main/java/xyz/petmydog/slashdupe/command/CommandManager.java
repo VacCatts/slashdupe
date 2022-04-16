@@ -18,7 +18,7 @@ public class CommandManager {
         this.modules.add(new FactionAlly());
         this.modules.add(new FactionTruce());
         this.modules.add(new Stack());
-        this.modules.add(new Join());
+        this.modules.add(new PlayerInfo());
         this.modules.add(new FactionChat());
     }
 

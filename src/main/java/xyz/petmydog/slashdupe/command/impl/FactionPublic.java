@@ -5,18 +5,18 @@ import net.minecraft.text.LiteralText;
 import xyz.petmydog.slashdupe.command.Command;
 
 public class FactionPublic extends Command {
-public FactionPublic() {
-        super("fp", "faction-public", "faction-public2");
+        public FactionPublic() {
+                super("fp", "changes your chat to public chat", "fp");
         }
 
-@Override
-public void onCommand(String alias, String[] args) throws Exception {
-        mc.inGameHud.getChatHud().addToMessageHistory("-fp");
-        try {
-        mc.player.sendChatMessage("/factions chat public");
+        @Override
+        public void onCommand(String alias, String[] args) throws Exception {
+                mc.inGameHud.getChatHud().addToMessageHistory("-fp");
+                try {
+                        mc.player.sendChatMessage("/f c p");
+                }
+                catch (NumberFormatException ex){
+                        ex.printStackTrace();
+                }
         }
-        catch (NumberFormatException ex){
-        ex.printStackTrace();
-        }
-        }
-        }
+}
