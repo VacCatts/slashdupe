@@ -14,6 +14,12 @@ public class CommandManager {
         this.modules.add(new Dupe());
         this.modules.add(new AntiAFK());
         this.modules.add(new Help());
+        this.modules.add(new FactionPublic());
+        this.modules.add(new FactionAlly());
+        this.modules.add(new FactionTruce());
+        this.modules.add(new Stack());
+        this.modules.add(new Join());
+        this.modules.add(new FactionChat());
     }
 
     public void callCommand(String input) {
