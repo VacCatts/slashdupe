@@ -49,4 +49,7 @@ public abstract class Command {
     }
 
     public abstract void onCommand(String alias, String[] args) throws Exception;
+
+    public void tick() {
+    }
 }

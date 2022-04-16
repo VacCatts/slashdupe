@@ -12,6 +12,8 @@ public class CommandManager {
         (modules = new ArrayList<Command>()).clear();
         this.modules.add(new Template());
         this.modules.add(new Dupe());
+        this.modules.add(new AntiAFK());
+        this.modules.add(new Help());
     }
 
     public void callCommand(String input) {
@@ -29,6 +31,12 @@ public class CommandManager {
                 }
                 return;
             }
+        }
+    }
+
+    public void tick() {
+        for (Command m : this.modules) {
+            m.tick();
         }
     }
 

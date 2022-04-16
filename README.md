@@ -23,7 +23,7 @@ features:
         - -pchat
         - -achat
 
-    - tpa lock
+    - tpa lock (not implemented)
         - if someone tpas to you, instantly tpacancel
         - toggle by putting -tpalock in the chat
 
@@ -45,7 +45,7 @@ features:
             - -cchat (ch)
 
 
-usage: -sld help
+usage: -help
 
 dupe: -d {amount}
 
