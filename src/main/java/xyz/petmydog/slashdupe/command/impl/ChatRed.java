@@ -10,8 +10,8 @@ public class ChatRed extends Command {
     @Override
     public void onCommand(String alias, String[] args) throws Exception {
         for(int i=0;i<args.length;i++) {
-            mc.inGameHud.getChatHud().addToMessageHistory("-cr " + args[i]);
-            mc.player.sendChatMessage("&4" + i);
+            mc.inGameHud.getChatHud().addToMessageHistory("-cr " + i);
+            mc.player.sendChatMessage("&4" + args[i]);
 
         }
     }
