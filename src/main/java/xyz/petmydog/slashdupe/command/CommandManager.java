@@ -20,7 +20,7 @@ public class CommandManager {
         this.modules.add(new Stack());
         this.modules.add(new PlayerInfo());
         this.modules.add(new FactionChat());
-        this.modules.add(new ChatColors());
+        this.modules.add(new ChatColor());
     }
 
     public void callCommand(String input) {
