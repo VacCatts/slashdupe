@@ -9,10 +9,14 @@ public class ChatRed extends Command {
 
     @Override
     public void onCommand(String alias, String[] args) throws Exception {
-        for(int i=0;i<args.length;i++) {
-            mc.inGameHud.getChatHud().addToMessageHistory("-cr " + i);
-            mc.player.sendChatMessage("&4" + args[i]);
 
+        mc.inGameHud.getChatHud().addToMessageHistory("-cr " + args[0]);
+
+        try {
+            mc.player.sendChatMessage("&4" + args[0]);
+
+        } catch (NumberFormatException ex) {
+            ex.printStackTrace();
         }
     }
 }
