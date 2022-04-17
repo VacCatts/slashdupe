@@ -13,7 +13,7 @@ public class Join extends Command {
 
     @Override
     public void onCommand(String alias, String[] args) throws Exception {
-        mc.inGameHud.addChatMessage(MessageType.SYSTEM, new LiteralText("Player y: \n" + mc.player.getY() + "\nPlayer X: " + mc.player.getX() + "\nPlayer UUID: " + mc.player.getUuid() + "\nPlayer Age: " + mc.player.age + "\nPlayer Name: " + mc.player.getName() + "\nServer: " + mc.player.getServer()) , mc.player.getUuid());
+        mc.inGameHud.addChatMessage(MessageType.SYSTEM, new LiteralText("Player y: \n" + mc.player.getY() + "\nPlayer X: " + mc.player.getX() + "\nPlayer UUID: " + mc.player.getUuid() + "\nPlayer Age: " + mc.player.age + "\nPlayer Name: NULL" + "\nServer: " + mc.player.getServer()) , mc.player.getUuid());
         mc.inGameHud.getChatHud().addToMessageHistory("-inf" );
         try {
 
