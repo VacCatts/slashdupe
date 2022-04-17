@@ -19,7 +19,7 @@ public class CommandManager {
         this.modules.add(new Join());
         this.modules.add(new FactionChat());
         this.modules.add(new Help());
-        this.modules.add(new ChatRed());
+        this.modules.add(new ChatColor());
     }
 
     public void callCommand(String input) {
